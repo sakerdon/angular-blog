@@ -31,7 +31,7 @@ import { AuthGuard } from './shared/auth.gurad';
     ])
   ],
   exports: [RouterModule],
-  providers: [AuthService, AuthGuard]
+  providers: [AuthGuard]
 })
 
 export class AdminModule {

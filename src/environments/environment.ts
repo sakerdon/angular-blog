@@ -6,7 +6,8 @@ import { Environment } from './interface';
 
 export const environment: Environment = {
   production: false,
-  apiKey: 'AIzaSyDEJTKvr8dFcVc4ggtcVyY2PLA-Ls5wAPs'
+  apiKey: 'AIzaSyDEJTKvr8dFcVc4ggtcVyY2PLA-Ls5wAPs',
+  DbUrl: 'https://angular-blog-f4db5.firebaseio.com/'
 }
 /*
  * For easier debugging in development mode, you can import the following file
