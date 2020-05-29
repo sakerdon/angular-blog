@@ -5,11 +5,11 @@
 @import '~quill/dist/quill.snow.css';
 
 :root {
-  --primary-color: #dc3545;
-  --dark-color: #333333;
+  --primary-color: blue;
+  --dark-color: black;
   --light-color: #f4f4f4;
-  --danger-color: #dc3545;
-  --success-color: #28a745;
+  --danger-color: red;
+  --success-color: #green;
 }
 
 * {
@@ -273,7 +273,7 @@ table th {
   margin-bottom: 1rem;
 
   &.main {
-    justify-content: center;
+    justify-content: space-between;
     border-bottom: 1px solid var(--dark-color);
   }
 
