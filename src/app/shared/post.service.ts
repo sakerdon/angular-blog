@@ -15,6 +15,21 @@ export class PostService {
         private http: HttpClient
     ) { }
 
+    update(post: Post): Observable<Post> {
+        return this.http.patch<Post>(environment.DbUrl + '/posts/' + post.id + '.json', post)
+    }
+
+    getById(id: string): Observable<Post> {
+        return this.http.get<Post>(environment.DbUrl + '/posts/' + id + '.json')
+            .pipe(map((post: Post) => {
+                return {
+                    ...post,
+                    id,
+                    date: new Date()
+                }
+            }))
+    }
+
     remove(id: string): Observable<void> {
         return this.http.delete<void>(environment.DbUrl + '/posts/' + id + '.json')
     }

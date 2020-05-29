@@ -32,7 +32,7 @@ import { SearchPipe } from './shared/search.pipe';
           { path: 'login', component: LoginPageComponent },
           { path: 'dashboard', component: DashboardPageComponent, canActivate: [AuthGuard] },
           { path: 'create', component: CreatePageComponent, canActivate: [AuthGuard] },
-          { path: 'edit', component: EditPageComponent, canActivate: [AuthGuard] },
+          { path: 'post/:id/edit', component: EditPageComponent, canActivate: [AuthGuard] },
         ]
       }
     ])
