@@ -1,23 +1,18 @@
-<div class="post">
-    <div class="header">
-        <h1>title</h1>
-        <button routerLink='/' class="btn btn-link">
-            <- Home</button>
-    </div>
-    <div class="info">
-        <strong>authore</strong>
-        <small>date</small>
-    </div>
-    <div>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto nemo omnis cumque voluptatum odio ad
-        eligendi blanditiis praesentium animi consequuntur ex velit natus maiores illo commodi harum odit, id accusamus.
-        Obcaecati neque eveniet eos illo nihil consectetur officiis quasi ipsa atque sint, unde magnam beatae iusto
-        laudantium nisi incidunt similique excepturi soluta explicabo. Quae sed ratione ipsa odit omnis deserunt!
-        Ullam neque aperiam laudantium ducimus et reiciendis, ab repudiandae maiores veritatis culpa est, deleniti
-        molestiae asperiores nihil iste corporis aut praesentium blanditiis voluptatibus necessitatibus quas ipsum non
-        esse. Suscipit, repudiandae!
-        Cumque laudantium autem possimus reiciendis et consectetur obcaecati optio doloribus dolorem vel recusandae
-        modi, fugiat veniam, veritatis est assumenda laboriosam. Similique vitae corporis neque, eos asperiores commodi
-        sapiente quam quos.
+<div *ngIf="post$ | async as post; else loading">
+    <div class="post">
+        <div class="header">
+            <h1>title</h1>
+            <button routerLink='/' class="btn btn-link">
+                <- Go Home</button>
+        </div>
+        <div class="info">
+            <strong>{{post.author}}</strong>
+            <small>{{post.date | date:'dd.MM.yyyy'}}</small>
+        </div>
+        <div>
+            <quill-view-html [content]="post.text"></quill-view-html>
+        </div>
     </div>
 </div>
+
+<ng-template #loading>loading...</ng-template>

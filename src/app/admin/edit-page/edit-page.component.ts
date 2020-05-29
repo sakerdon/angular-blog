@@ -4,7 +4,6 @@ import { PostService } from 'src/app/shared/post.service';
 import { switchMap } from 'rxjs/operators';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Post } from 'src/app/shared/interfaces';
-import { ThrowStmt } from '@angular/compiler';
 import { Subscription } from 'rxjs';
 import { AlertService } from '../shared/services/alert.service';
 
